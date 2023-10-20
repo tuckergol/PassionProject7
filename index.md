@@ -7,7 +7,7 @@ title: Student Blog
 <head>
     <title>Geoguessr Game</title>
     <style>
-        /* Add your CSS styles here */
+        <font>
     </style>
 </head>
 <body>
@@ -17,7 +17,7 @@ title: Student Blog
 
     <script>
         async function getRandomLocation() {
-            const response = await fetch('YOUR_BACKEND_ENDPOINT_URL/random-location');
+            const response = await fetch('backend url/random-location');
             const data = await response.json();
             const locationElement = document.getElementById('location');
             locationElement.innerText = `Location: ${data.name}, Latitude: ${data.latitude}, Longitude: ${data.longitude}`;
