@@ -1,0 +1,116 @@
+---
+layout: default
+title: Student Blog
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Worldle Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #345995;
+        }
+
+        #word-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 400px;
+            border: 2px solid #345995;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        #input-box {
+            margin-top: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Worldle Game</h1>
+    <div id="word-box"></div>
+    <div id="compass"></div>
+    <div id="input-box">
+        <input type="text" id="user-input" placeholder="Enter your guess" />
+        <button onclick="checkGuess()">Check</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        const countries = ["Afghanistan", "Albania", "Algeria", /* Add all countries here */ "Zimbabwe"];
+        let currentCountry, currentLat, currentLng, attempts, lastDistance, lastDirection;
+
+        function startRound() {
+            currentCountry = countries[Math.floor(Math.random() * countries.length)];
+            document.getElementById('word-box').innerText = currentCountry;
+            attempts = 0;
+            lastDistance = 0;
+            lastDirection = "";
+        }
+
+        function checkGuess() {
+            const userInput = document.getElementById('user-input').value.trim();
+            if (userInput.toLowerCase() === currentCountry.toLowerCase()) {
+                document.getElementById('result').innerText = `Congratulations! You guessed it right in ${attempts + 1} attempts.`;
+            } else {
+                attempts++;
+                const direction = Math.random() * 360;
+                const distance = getDistance(currentCountry, userInput);
+                lastDistance = distance;
+                lastDirection = getDirection(direction);
+                document.getElementById('result').innerText = `Try again. Attempt: ${attempts}. You went ${lastDistance.toFixed(2)} kilometers ${lastDirection}.`;
+            }
+        }
+
+        function getDistance(country1, country2) {
+            // Implement your distance calculation logic here
+            // Return the calculated distance
+            return Math.random() * 1000; // Sample random distance
+        }
+
+        function getDirection(angle) {
+            const directions = ['north', 'north-east', 'east', 'south-east', 'south', 'south-west', 'west', 'north-west'];
+            const index = Math.round(angle / 45) % 8;
+            return directions[index];
+        }
+
+        startRound(); // Start the first round
+    </script>
+</body>
+
+</html>
