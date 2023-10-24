@@ -1,0 +1,20 @@
+---
+layout: help
+permalink: /help
+title: Geoestimator
+---
+
+<html>
+<body>
+    <p id="location">Loading location...</p>
+    <button onclick="getRandomLocation()">Random Locaton</button>
+
+    <script>
+        function getRandomLocation() {
+            const randomNumber = Math.floor(Math.random() * 20); // Change the range as needed
+            const locationElement = document.getElementById('location');
+            locationElement.innerText = `${randomNumber}`;
+        }
+    </script>
+</body>
+</html>
