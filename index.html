@@ -62,17 +62,18 @@ title: Student Blog
 </head>
 
 <body>
-    <h1>Worldle Game</h1>
+    <h1>Geoestimator</h1>
     <div id="word-box"></div>
     <div id="compass"></div>
     <div id="input-box">
         <input type="text" id="user-input" placeholder="Enter your guess" />
         <button onclick="checkGuess()">Check</button>
+        <button onclick="startRound()">New Round</button>
     </div>
     <div id="result"></div>
 
     <script>
-        const countries = ["Afghanistan", "Albania", "Algeria", /* Add all countries here */ "Zimbabwe"];
+        const countries = ["Afghanistan", "Albania", "Algeria", "Zimbabwe"];
         let currentCountry, currentLat, currentLng, attempts, lastDistance, lastDirection;
 
         function startRound() {
@@ -98,9 +99,7 @@ title: Student Blog
         }
 
         function getDistance(country1, country2) {
-            // Implement your distance calculation logic here
-            // Return the calculated distance
-            return Math.random() * 1000; // Sample random distance
+            return Math.random() * 1000;
         }
 
         function getDirection(angle) {
@@ -109,7 +108,7 @@ title: Student Blog
             return directions[index];
         }
 
-        startRound(); // Start the first round
+        startRound(); 
     </script>
 </body>
 
