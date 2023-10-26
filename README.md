@@ -1,28 +1,25 @@
 # Geoestimator - README
-### General Information
+## General Information (Introduction: what is Geoestimator?)
 
 Geoestimator: a game that involves determining the geographical location of a country given through a silhouetted/general shape of said country.
 
 This a educationally-originated project created for the purpose of fulfilling an assignment's requirements at Del Norte High School for AP Computer Science Principles. Our [the developers'] coding skills and the project itself are still growing and are not polished/completed to their fullest potential.
 
-### How to Use: Gameplay
+## Main "Play" Functionality
 
-- Users will be greeted at the website's original homepage
-    - Users must navigate to the "Play" button at the top of the site
-        - From there, a randomly generated country will immediately be given and users can jump straight into the gameplay
-            - To enter an answer, simply type the name of a country (MUST BE SPELLED CORRECTLY) and hit the "Enter Answer" button
-                - If the user answer is correct, the user will be given the option to generate another random country from the database; this will be allowed over and over again
-                - If the user gets the answer incorrect, the direction and distance their guess was from the answer will be printed to aid in finding the correct country
-- A timer and leaderboards will be in effect
-- Hints towards the country's direction in relation to an incorrect guess will be given to aid in finding the correct country
-- 1 point will be given for each correctly guessed answer
+### Code Structure
 
-### Additional Site Navigation
+- The code for Geoestimator is divided into HTML and JavaScript sections
+    - Here's a brief overview of each part:
+        - HTML (<head> and <body>): The HTML structure defines the game's layout, including the title, input box, buttons, and result display.
+        - CSS (<style>): The CSS styles define the appearance and layout of the game elements, making it visually appealing.
+        - JavaScript (<script>): The JavaScript section contains the game's logic. It randomly selects a country, calculates the direction and distance of guesses, and provides feedback to players.
 
-- Alongside the "Play" button, users will find a small collection of other buttons at the top of the site
-    - "About Us"
-        - Additional information about us, the developers, and the purpose of the project; this follows some of the information stated in this file
-    - "Leaderboards"
-        - Will contain leaderboards that display highest high scores
-            - "High scores" refer to how many times in a row countries were guessed correctly before an incorrect answer was entered
-    - More buttons may be added in the future
+### Technical Details
+
+- Random country slection: game randomly selects a country from a predefined list
+    - Relates to visuals
+        - Ex: flags, images, etc.
+- Guess comparison: player guesses are compared to the selected country, and feedback is provided based on a distance and direction
+- Direction calculation: the direction of guesses is calculated using an angle and mapped to cardinal directions (ex: north, east, etc.)
+- Distance calculation: distance of guesses is calculated for feedback
