@@ -136,8 +136,8 @@ title: Play
             attempts = 0;
             lastDistance = 0;
             lastDirection = "";
-            document.getElementById('result').innerText = ""; // Clear the result text
-            document.getElementById('user-input').value = ""; // Clear the input box
+            document.getElementById('result').innerText = "";
+            document.getElementById('user-input').value = "";
 
             resetTimer();
         }
@@ -151,9 +151,9 @@ title: Play
                 attempts++;
                 const lengthDifference = currentCountry.length - userInput.length;
                 if (lengthDifference > 0) {
-                    document.getElementById('result').innerText = `Try again. You are ${lengthDifference} letters too short.`;
+                    document.getElementById('result').innerText = `Try again. Your answer is ${lengthDifference} letters too short.`;
                 } else {
-                    document.getElementById('result').innerText = `Try again. You are ${Math.abs(lengthDifference)} letters too long.`;
+                    document.getElementById('result').innerText = `Try again. Your answer is ${Math.abs(lengthDifference)} letters too long.`;
                 }
             }
         }
@@ -161,7 +161,7 @@ title: Play
         function resetTimer() {
             startTime = new Date().getTime();
             clearInterval(timerInterval);
-            timerInterval = setInterval(updateTimer, 10); // Update every 10 milliseconds
+            timerInterval = setInterval(updateTimer, 10);
         }
 
         function stopTimer() {
