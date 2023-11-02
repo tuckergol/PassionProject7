@@ -16,13 +16,13 @@ NOTE: indexPlay.html (flags) and indexPlay2.html (country silhouettes) are nearl
 ### Structure: Applies to HTML Files
 - index.html: The HTML file containing the main home page's information, which users will be greeted with.
     - Contains basic HTML, involving image links and code structures.
-        - "<!DOCTYPE html>": This declaration specifies the document type and version of HTML being used.
+        - '<!DOCTYPE html>': This declaration specifies the document type and version of HTML being used.
             - HTML5 in this case.
-        - "<html>": This tag marks the beginning of the HTML document. All other HTML elements are contained within it.- - "<head>": This section contains metadata about the HTML document, including the title, which is displayed in the browser's title bar or tab. In this case, the title is "Home."
-        - "<title>": This tag sets the title of the HTML document, which is displayed in the browser's title bar or tab.
-        - "<body>": This section contains the main content of the HTML document that is visible in the web browse
-        - "<div>:" This tag is a container or division element that is often used to group and style other HTML elements. It doesn't have any specific visual impact on its own.
-        - "<img>": This tag is used to embed an image in the HTML document. It has several attributes.
+        - '<html>': This tag marks the beginning of the HTML document. All other HTML elements are contained within it.- - '<head>': This section contains metadata about the HTML document, including the title, which is displayed in the browser's title bar or tab. In this case, the title is "Home."
+        - '<title>': This tag sets the title of the HTML document, which is displayed in the browser's title bar or tab.
+        - '<body>": This section contains the main content of the HTML document that is visible in the web browse
+        - '<div>': This tag is a container or division element that is often used to group and style other HTML elements. It doesn't have any specific visual impact on its own.
+        - '<img>': This tag is used to embed an image in the HTML document. It has several attributes.
             - "images/": This directory houses flag images for various countries.
             - "README.md": The documentation you are currently reading.
 
@@ -49,12 +49,12 @@ NOTE: indexPlay.html (flags) and indexPlay2.html (country silhouettes) are nearl
 ### JavaScript Functions
 
 - The JavaScript section of the code contains functions that manage Geoestimator's behavior. Primary functions listed below.
-    - "startRound()": Selects a random country, displays its flag, and resets various game-related variables.
-    - "checkGuess()": Compares the user's guess to the selected country and provides feedback on correctness.
-    - "resetTimer()": Initiates the timer when a new round begins.
-    - "stopTimer()": Halts the timer when the user guesses the correct country.
-    - "updateTimer()": Updates the timer's display with the elapsed time.
-    - "pad()": A helper function for formatting time components with leading zeros.
+    - 'startRound()': Selects a random country, displays its flag, and resets various game-related variables.
+    - 'checkGuess()': Compares the user's guess to the selected country and provides feedback on correctness.
+    - 'resetTimer()': Initiates the timer when a new round begins.
+    - 'stopTimer()': Halts the timer when the user guesses the correct country.
+    - 'updateTimer()': Updates the timer's display with the elapsed time.
+    - 'pad()': A helper function for formatting time components with leading zeros.
 
 ## Prerequisites
 
